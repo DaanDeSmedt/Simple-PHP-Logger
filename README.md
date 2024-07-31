@@ -58,7 +58,7 @@ function connectToDatabase()
         
         Logger::fatal("Database connection failed", [$e->getMessage()]); // <- Log a fatal error with details
         
-        die('Oh snap, looks like something didn't work. Please retry again later'); // <- UX friendly die() message
+        die("Oh snap, looks like something didn't work. Please retry again later"); // <- UX friendly die() message
     }
 }
 ```
