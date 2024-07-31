@@ -307,7 +307,7 @@ class Logger
     {
         $pathAbs = str_replace(['/', '\\'], '/', $pathToConvert);
         $documentRoot = str_replace(['/', '\\'], '/', $_SERVER['DOCUMENT_ROOT']);
-        return $_SERVER['SERVER_NAME'] . str_replace($documentRoot, '', $pathAbs);
+        return ($_SERVER['SERVER_NAME'] ?? '') . str_replace($documentRoot, '', $pathAbs);
     }
 
     /**
